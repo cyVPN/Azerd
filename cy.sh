@@ -36,7 +36,7 @@ clear;clear;clear
 
   # // Banner
 echo -e "${YELLOW}----------------------------------------------------------${NC}"
-echo -e "\033[41;1;97m                       CY VPN STORE                      ${NC}"
+echo -e "\033[41;1;97m                       CY TUNNELING                     ${NC}"
 echo -e "${YELLOW}----------------------------------------------------------${NC}"
 echo ""
 sleep 3
