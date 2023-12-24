@@ -770,10 +770,10 @@ clear
 # banner /etc/issue.net
 sleep 1
 echo -e "[ ${green}INFO$NC ] Settings banner"
-wget -q -O /etc/cyber.site "https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/issue.net"
-chmod +x /etc/cyber.site
-echo "Banner /etc/cyber.site" >> /etc/ssh/sshd_config
-sed -i 's@DROPBEAR_BANNER=""@DROPBEAR_BANNER="/etc/cyber.site"@g' /etc/default/dropbear
+wget -q -O /etc/banner.txt "https://raw.githubusercontent.com/cyVPN/Azerd/ABSTRAK/banner/banner.txt"
+chmod +x /etc/banner.txt
+echo "Banner /etc/banner.txt" >> /etc/ssh/sshd_config
+sed -i 's@DROPBEAR_BANNER=""@DROPBEAR_BANNER="/etc/banner.txt"@g' /etc/default/dropbear
 
 }
 
