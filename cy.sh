@@ -767,13 +767,14 @@ else
 fi
 
 clear
-# banner
-echo "Banner /etc/banner.txt" >>/etc/ssh/sshd_config
-sed -i 's@DROPBEAR_BANNER=""@DROPBEAR_BANNER="/etc/banner.txt"@g' /etc/default/dropbear
+# banner /etc/issue.net
+sleep 1
+echo -e "[ ${green}INFO$NC ] Settings banner"
+wget -q -O /etc/cyber.site "https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/issue.net"
+chmod +x /etc/cyber.site
+echo "Banner /etc/cyber.site" >> /etc/ssh/sshd_config
+sed -i 's@DROPBEAR_BANNER=""@DROPBEAR_BANNER="/etc/cyber.site"@g' /etc/default/dropbear
 
-# Ganti Banner
-wget -O /etc/kyt.txt "${REPO}banner/issue.net"
-print_success "Fail2ban"
 }
 
 function ins_epro(){
