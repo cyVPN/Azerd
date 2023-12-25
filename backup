@@ -1,3 +1,9 @@
+#!/bin/bash
+
+IP=$(curl -sS ipv4.icanhazip.com)
+domain=$(cat /etc/xray/domain)
+date=$(date +"%Y-%m-%d")
+
 rm -rf /root/backup
 mkdir /root/backup
 cp /etc/passwd backup/
