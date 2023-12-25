@@ -1,0 +1,40 @@
+rm -rf /root/backup
+mkdir /root/backup
+cp /etc/passwd backup/
+cp /etc/group backup/
+cp /etc/shadow backup/
+cp /etc/gshadow backup/
+cp /etc/crontab backup/
+cp -r /etc/vmess/ backup/
+cp -r /etc/ssh/ backup/
+cp -r /etc/vless/ backup/
+cp -r /etc/trojan/ backup/
+cp -r /etc/limit/vmess/ /root/backup/vmessquota
+cp -r /etc/limit/vless/ /root/backup/vlessquota
+cp -r /etc/limit/trojan/ /root/backup/trojanquota
+cp -r /etc/limit/shadowsocks/ /root/backup/shadowsocksquota
+cp -r /etc/kyt/limit/vmess/ip/ /root/backup/vmessip
+cp -r /etc/kyt/limit/vless/ip/ /root/backup/vlessip
+cp -r /etc/kyt/limit/trojan/ip/ /root/backup/trojanip
+cp -r /etc/kyt/limit/shadowsocks/ip/ /root/backup/shadowsocksip
+cp -r /etc/shadowsocks/ backup/
+cp -r /var/lib/kyt/ backup/kyt 
+cp -r /etc/xray backup/xray
+cp -r /var/www/html/ backup/html
+cd /root
+zip -r $IP-$date.zip backup > /dev/null 2>&1
+rclone copy /root/$IP-$date.zip dr:backup/
+url=$(rclone link dr:backup/$IP-$date.zip)
+id=(`echo $url | grep '^https' | cut -d'=' -f2`)
+link="https://drive.google.com/u/4/uc?id=${id}&export=download"
+echo -e "
+Detail Backup 
+==================================
+IP VPS        : $IP
+Link Backup   : $link
+Tanggal       : $date
+==================================
+" | mail -s "Backup Data" $email
+rm -rf /root/backup
+rm -r /root/$IP-$date.zip
+
