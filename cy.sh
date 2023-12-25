@@ -700,6 +700,8 @@ cd /bin
 git clone  https://github.com/magnific0/wondershaper.git
 cd wondershaper
 sudo make install
+wget -q -O /usr/bin/backup "https://raw.githubusercontent.com/cyVPN/Azerd/ABSTRAK/backup" && chmod +x /usr/bin/backup
+
 cd
 rm -rf wondershaper
 echo > /home/files
