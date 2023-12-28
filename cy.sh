@@ -992,6 +992,7 @@ instal
 wget -q -O /usr/bin/genssl  "https://raw.githubusercontent.com/Agunxzzz/XrayCol/main/minacantik/genssl.sh" && chmod +x /usr/bin/genssl
 mkdir /var/lib/ssnvpn-pro/
 wget -q -O /var/lib/ssnvpn-pro/ipvps.conf "https://cybervpn.serv00.net/Autoscript-by-azi-main/ipvps.conf"
+wget -q -O /usr/local/sbin/addhost "https://raw.githubusercontent.com/cyVPN/Azerd/ABSTRAK/addhost.sh" && chmod +x /usr/local/sbin/addhost
 echo ""
 history -c
 rm -rf /root/menu
