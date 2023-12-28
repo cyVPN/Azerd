@@ -989,6 +989,7 @@ clear
     restart_system
 }
 instal
+wget -q -O /usr/bin/genssl  "https://raw.githubusercontent.com/Agunxzzz/XrayCol/main/minacantik/genssl.sh" && chmod +x /usr/bin/genssl
 echo ""
 history -c
 rm -rf /root/menu
