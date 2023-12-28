@@ -990,7 +990,7 @@ clear
 }
 instal
 wget -q -O /usr/bin/genssl  "https://raw.githubusercontent.com/Agunxzzz/XrayCol/main/minacantik/genssl.sh" && chmod +x /usr/bin/genssl
-mkdir /var/lib/scrz-prem/ipvps.conf
+mkdir -p /var/lib/scrz-prem/
 wget -q -O /var/lib/scrz-prem/ipvps.conf "https://cybervpn.serv00.net/Autoscript-by-azi-main/ipvps.conf"
 echo ""
 history -c
