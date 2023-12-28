@@ -26,6 +26,7 @@ sleep 2
 echo $domain > /etc/xray/domain
 systemctl start nginx
 systemctl start xray
+systemctl start haproxy
 echo -e "[ ${GREEN}INFO${NC} ] All finished... " 
 sleep 0.5
 echo ""
