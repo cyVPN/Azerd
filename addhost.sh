@@ -18,4 +18,5 @@ echo "Dont forget to renew genssl"
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu"
 genssl
+systemctl restart haproxy
 fi
